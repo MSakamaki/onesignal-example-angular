@@ -1,0 +1,20 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "onesignalExampleAngular",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "onesignal-example-angular",
+      "kebab-case"
+    ]
+  },
+  "linterOptions": {
+    "exclude": ["!**/*"]
+  }
+}
