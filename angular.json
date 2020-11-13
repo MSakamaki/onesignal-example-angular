@@ -22,8 +22,11 @@
             "tsConfig": "apps/webpage/tsconfig.app.json",
             "aot": true,
             "assets": [
+              "apps/webpage/src/OneSignalSDKWorker.js",
+              "apps/webpage/src/OneSignalSDKUpdaterWorker.js",
               "apps/webpage/src/favicon.ico",
-              "apps/webpage/src/assets"
+              "apps/webpage/src/assets",
+              "apps/webpage/src/manifest.webmanifest"
             ],
             "styles": ["apps/webpage/src/styles.scss"],
             "scripts": []
@@ -36,14 +39,14 @@
                   "with": "apps/webpage/src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": true,
+              "optimization": false,
               "outputHashing": "all",
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true,
+              "buildOptimizer": false,
               "budgets": [
                 {
                   "type": "initial",
@@ -55,7 +58,9 @@
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "apps/webpage/ngsw-config.json"
             }
           }
         },
